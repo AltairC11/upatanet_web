@@ -9,7 +9,7 @@ export const envConfig = {
 
 
   db: {
-    path: process.env.DB_PATH || './data/upatanet.db',
+    path: process.env.DB_PATH || './src/upatanet.db',
   },
 
 
