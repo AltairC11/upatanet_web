@@ -30,19 +30,19 @@ export const CreacionJornada = () => {
                     <div className="form-group">
                         <label>Tipo de jornada</label>
                         <select>
-                        <option value="medica">Jornada médica</option>
-                        <option value="vacunacion">Vacunación</option>
+                            <option value="medica">Jornada médica</option>
+                            <option value="vacunacion">Vacunación</option>
                         </select>
                     </div>
 
                     <div className="form-row">
                         <div className="form-group">
-                        <label>Fecha inicial</label>
-                        <input type="text" placeholder="18/07/2026" />
+                            <label>Fecha inicial</label>
+                            <input type="text" placeholder="18/07/2026" />
                         </div>
                         <div className="form-group">
-                        <label>Fecha final</label>
-                        <input type="text" placeholder="20/07/2026" />
+                            <label>Fecha final</label>
+                            <input type="text" placeholder="20/07/2026" />
                         </div>
                     </div>
 
@@ -61,27 +61,27 @@ export const CreacionJornada = () => {
                         <button type="button" onClick={() => setModalAbierto('crear')} className="btn" style={{ border: '1px solid #C43B26'}}>Guardar</button>
                         <button type="button" onClick={() => setModalAbierto('cancelar')} className="btn" style={{ background: '#F2E9D8', border: '1px solid #adaba4', color: 'black'}}>Cancelar</button>
                     </div>
+                </form>
 
-                    {/* Modal crear y modal cancelar */}
-                    {modalAbierto==='crear' && (
-                        <Modal Cerrar={() => setModalAbierto(null)}>
+                {/* Modal crear y modal cancelar */}
+                {modalAbierto==='crear' && (
+                    <Modal Cerrar={() => setModalAbierto(null)}>
                         <p>¿Está seguro de que desea hacer pública esta jornada?</p>
                         <div className='form-actions'>
                             <button type="button" className="btn" style={{ border: '1px solid #C43B26'}}>Sí</button>
                             <button type="button" onClick={() => setModalAbierto(null)} className="btn" style={{ background: '#3A3A3C', border: '1px solid #3A3A3C', color: 'white'}}>No</button>
                         </div>
-                        </Modal>
-                    )}
-                    {modalAbierto==='cancelar' && (
-                        <Modal Cerrar={() => setModalAbierto(null)}>
+                    </Modal>
+                )}
+                {modalAbierto==='cancelar' && (
+                    <Modal Cerrar={() => setModalAbierto(null)}>
                         <p>¿Está seguro de que desea cancelar la publicación de esta jornada?</p>
                         <div className='form-actions'>
                             <button type="button" className="btn" style={{ border: '1px solid #C43B26'}}>Sí</button>
                             <button type="button" onClick={() => setModalAbierto(null)} className="btn" style={{ background: '#3A3A3C', border: '1px solid #3A3A3C', color: 'white'}}>No</button>
                         </div>
-                        </Modal>
-                    )}
-                </form>
+                    </Modal>
+                )}
             </main>
         </div>
     );
